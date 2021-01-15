@@ -1,0 +1,127 @@
+@prefix this: <http://bdj.pensoft.net/pub1.RAeiK0iwo42Vj1UeYMFmac-FPvdRrwhMfbnJ_kXUBkOp4> .
+@prefix sub: <http://bdj.pensoft.net/pub1.RAeiK0iwo42Vj1UeYMFmac-FPvdRrwhMfbnJ_kXUBkOp4#> .
+@prefix bdj: <http://bdj.pensoft.net/> .
+@prefix obkms: <http://pensoft.net/ontology/> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix pro: <http://purl.org/spar/pro/> .
+@prefix scoro: <http://purl.org/spar/scoro/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dsw: <http://purl.org/dsw/> .
+@prefix blocal: <http://bioimages.vanderbilt.edu/rdf/local#> .
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix nomen: <http://purl.obolibrary.org/obo/NOMEN/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix : <http://rdf.biosemantics.org/vocabularies/gene_disease_nanopub_example#> .
+
+:NanoPub_1_Head {
+    this: np:hasAssertion :NanoPub_1_Head_Assertion ;
+        np:hasProvenance :NanoPub_1_Head_Provenance ;
+        np:hasPublicationInfo :NanoPub_1_Head_PubInfo ;
+        a np:Nanopublication .
+}
+
+:NanoPub_1_Head_Assertion {
+    sub:_1 dsw:locatedAt sub:_2 ;
+        dwc:eventDate "05/25/2015" ;
+        dwc:habitat "under stones" ;
+        dwc:samplingProtocol "hand collecting" ;
+        a dwc:Event .
+    
+    sub:_2 dwc:continent "Asia" , dbpedia:Asia ;
+        dwc:country "Turkmenistan" , dbpedia:Turkmenistan ;
+        dwc:county "Koytendag District" ;
+        dwc:decimalLatitude "37 56.443" ;
+        dwc:decimalLongitude "66 37.597" ;
+        dwc:locality "v. Hojeypil, around the Dinosaurs tracks Site" ;
+        dwc:stateProvince "Lebap" , dbpedia:Lebap ;
+        dwc:verbatimElevation "1150" ;
+        a dcterms:Location .
+    
+    sub:_3 blocal:secundumSignature "Deltschev 2016" ;
+        dcterms:description "Determination of Haser stoevi sec. Deltschev 2016"@en ;
+        dsw:identifies sub:_4 ;
+        dwciri:identifiedBy :christo-deltschev ;
+        dwciri:toTaxon :haser-stoevi-sec-deltschev-2016 ;
+        dwc:dateIdentified "2015"^^xsd:date ;
+        dwc:family "Tayassuidae" ;
+        dwc:identificationID :haser-stoevi-deltschev-2016 ;
+        dwc:scientificName "Heser stoevi" ;
+        dwc:scientificNameAuthorship "Deltschev" ;
+        dwc:taxonRank "species" ;
+        a dwc:Identification .
+    
+    sub:_4 dsw:hasIdentification sub:_3 ;
+        dsw:hasOccurrence sub:_6 ;
+        a dwc:Organism ;
+        <http://www.w3.org/2000/01/rdf-schema#comment> "A new spider species, Heser stoevi sp. nov. (male and female) found in Koytendag Mountains, southeastern Turkmenistan is described and illustrated."@en .
+    
+    sub:_5 dsw:evidenceFor sub:_6 ;
+        dsw:isBasisForId sub:_3 ;
+        dwc:collectionID "Archnida" ;
+        dwc:institutionID "NMNHS" ;
+        dwc:typeStatus obkms:Holotype ;
+        a dsw:Token .
+    
+    sub:_6 dsw:atEvent sub:_1 ;
+        dsw:eventOf sub:_6 ;
+        dsw:hasEvidence sub:_5 ;
+        dsw:occurrenceOf sub:_4 ;
+        dsw:recordedBy :p-stoev ;
+        dwc:occurrenceID <http://id.pensoft.net/BDJ_6153_1> ;
+        a dwc:Occurrence .
+    
+    :christo-deltschev pro:holdsRoleInTime :christo-deltschev-author ;
+        a foaf:Agent , foaf:Person ;
+        skos:prefLabel "deltshev@gmail.com" ;
+        vcard:email "deltschev@gmail.com" ;
+        vcard:family-name "Deltschev" ;
+        vcard:fn "Christo Deltschev" ;
+        vcard:given-name "Christo" ;
+        foaf:fullName "Christo Deltschev" .
+    
+    :christo-deltschev-author pro:relatesToDocument <http://dx.doi.org/10.3897/BDJ.4.e10095> ;
+        pro:withRole pro:author , scoro:corresponding-author , scoro:senior-author ;
+        a pro:RoleInTime .
+    
+    :eotuama a foaf:Agent ;
+        vcard:fullName "Éamonn Ó Tuama" .
+    
+    :haser-stoevi-deltschev dwc:genus "Haser" ;
+        dwc:rank "species" ;
+        dwc:scientificName "Heser stoevi Deltschev" ;
+        dwc:scientificNameAuthorship "Deltshev" ;
+        dwc:species "stoevi" ;
+        a nomen:ScientificName .
+    
+    :haser-stoevi-sec-deltshev-2016 dwciri:accordingTo <http://dx.doi.org/10.3897/BDJ.4.e10095> ;
+        dwc:accordingTo "Deltschev 2016" ;
+        dwc:class "Insecta" ;
+        dwc:family "Gnaphosidae" ;
+        dwc:genus "Haser" ;
+        dwc:order "Araneae" ;
+        dwc:rank "species" ;
+        dwc:scientificName :haser-stoevi-deltschev ;
+        dwc:scientificNameID "urn:lsid:zoobank.org:act:E4D7D5A0-D649-4F5E-9360-D0488D73EEE8" ;
+        a dwc:Taxon .
+    
+    :p-stoev a foaf:Agent ;
+        vcard:fullName "P. Stoev" .
+}
+
+:NanoPub_1_Head_Provenance {
+    :NanoPub_1_Head_Assertion prov:generatedAtTime "2016-08-31"^^xsd:dateTime .
+    
+    :NanoPub_1_Head__Assertion prov:hadPrimarySource <http://dx.doi.org/10.3897/BDJ.4.e10095> .
+}
+
+:NanoPub_1_Head_PubInfo {
+    this: prov:generatedAtTime "2016-10-10T12:30:00Z"^^xsd:dateTime ;
+        prov:wasAttributedTo :eotuama .
+}
+
