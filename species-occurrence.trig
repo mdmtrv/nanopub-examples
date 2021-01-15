@@ -1,0 +1,118 @@
+
+@prefix this: <http://bdj.pensoft.net/pub1.RApGGdbitsavsNfaCNT1Ly8UxP7RU9vB4-izgCKH_4ldU> .
+@prefix sub: <http://bdj.pensoft.net/pub1.RApGGdbitsavsNfaCNT1Ly8UxP7RU9vB4-izgCKH_4ldU#> .
+@prefix bdj: <http://bdj.pensoft.net/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dsw: <http://purl.org/dsw/> .
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.99/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix : <http://rdf.biosemantics.org/vocabularies/gene_disease_nanopub_example#> .
+
+:NanoPub_1_Head {
+    this: np:hasAssertion :NanoPub_1_Head_Assertion ;
+        np:hasProvenance :NanoPub_1_Head_Provenance ;
+        np:hasPublicationInfo :NanoPub_1_Head_PubInfo ;
+        a np:Nanopublication .
+}
+
+:NanoPub_1_Head_Assertion {
+    sub:_1 a foaf:Agent ;
+        foaf:name "Yuchen Ang" .
+    
+    sub:_10 dwc:family "Sepsidae" ;
+        dwc:genus "Zuskamira" ;
+        dwc:scientificName "Zuskamira inexpectata" ;
+        dwc:scientificNameAuthorship "Pont, 1987" ;
+        dwc:specificEpithet "inexpectata" ;
+        dwc:taxonRank "species" ;
+        a dwc:Taxon .
+    
+    sub:_11 dwciri:identifiedBy sub:_1 ;
+        dwciri:toTaxon sub:_10 ;
+        dwc:dateIdentified "2011" ;
+        a dwc:Identification .
+    
+    sub:_12 dsw:atEvent sub:_5 ;
+        dwciri:recordedBy sub:_1 , sub:_2 , sub:_3 ;
+        dwc:individualCount "20" ;
+        dwc:lifeStage "adult" ;
+        dwc:sex "Males(12) and Females(8)" ;
+        a dwc:Occurrence .
+    
+    sub:_13 dsw:atEvent sub:_7 ;
+        dwciri:recordedBy sub:_1 ;
+        dwc:individualCount "2" ;
+        dwc:lifeStage "adult" ;
+        dwc:sex "Male and Female" ;
+        a dwc:Occurrence .
+    
+    sub:_14 dsw:hasIdentification sub:_11 , sub:_9 ;
+        dsw:hasOccurrence sub:_12 , sub:_13 ;
+        a dsw:Organism ;
+        <http://www.w3.org/2000/01/rdf-schema#comment> "a new record for an enigmatic black scavenger fly, Zuskamira inexpectata (Pont, 1987) (Sepsidae) in Finland"@en .
+    
+    sub:_2 a foaf:Agent ;
+        foaf:name "Rudolf Meier" .
+    
+    sub:_3 a foaf:Agent ;
+        foaf:name "Patrick Rohner" .
+    
+    sub:_4 a foaf:Agent ;
+        foaf:name "Éamonn Ó Tuama" .
+    
+    sub:_5 dsw:locatedAt sub:_6 ;
+        dwc:eventDate "7.vii.2014" ;
+        dwc:habitat "Horse-pasture" ;
+        dwc:samplingProtocol "Sweep-netting" ;
+        a dwc:Event .
+    
+    sub:_6 dwc:country "Sweden" ;
+        dwc:countryCode "SE" ;
+        dwc:county "Dalarna" ;
+        dwc:decimalLatitude "61.12278" ;
+        dwc:decimalLongitude "14.48222" ;
+        dwc:georeferenceSources "GPS" ;
+        dwc:locality "Orsa" ;
+        dwc:municipality "Orsa" ;
+        dwc:stateProvince "Dalarna" ;
+        dwc:verbatimLocality "Dalarna, Orsa" ;
+        a dcterms:Location .
+    
+    sub:_7 dsw:locatedAt sub:_8 ;
+        dwc:eventDate "20.vii.2011" ;
+        dwc:habitat "Horse-pasture" ;
+        dwc:samplingProtocol "Sweep-netting" ;
+        a dwc:Event .
+    
+    sub:_8 dwc:country "Finland" ;
+        dwc:countryCode "FI" ;
+        dwc:county "Uusimaa" ;
+        dwc:decimalLatitude "60.26333" ;
+        dwc:decimalLongitude "24.23444" ;
+        dwc:georeferenceSources "GPS" ;
+        dwc:locality "Lohja" ;
+        dwc:municipality "Lohja" ;
+        dwc:stateProvince "Uusimaa" ;
+        dwc:verbatimLocality "Southern Finland, Uusimaa, sub-Helsinki, Lohja" ;
+        a dcterms:Location .
+    
+    sub:_9 dwciri:identifiedBy sub:_1 , sub:_2 , sub:_3 ;
+        dwciri:toTaxon sub:_10 ;
+        dwc:dateIdentified "2014" ;
+        a dwc:Identification .
+}
+
+:NanoPub_1_Head_Provenance {
+    :NanoPub_1_Head_Assertion prov:generatedAtTime "2015-06-26"^^xsd:dateTime .
+    
+    :NanoPub_1_Head__Assertion prov:hadPrimarySource "doi: 10.3897/BDJ.3.e4308" .
+}
+
+:NanoPub_1_Head_PubInfo {
+    this: prov:generatedAtTime "2016-10-10T12:30:00Z"^^xsd:dateTime ;
+        prov:wasAttributedTo sub:_4 .
+}
