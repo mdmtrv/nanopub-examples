@@ -1,0 +1,39 @@
+@prefix this: <http://purl.org/np/RAwuR4yIFB2vjaf0Fs_IIYBxZp_5hKp8Rvy4iJvm1Xack> .
+@prefix sub: <http://purl.org/np/RAwuR4yIFA3fjaf0Fs_IIYBxZp_5hKp8Rvy4iJWm2Xask> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix nomen: <http://purl.obolibrary.org/obo/NOMEN/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+sub:Head {
+    this: np:hasAssertion sub:Assertion ;
+        np:hasProvenance sub:Provenance ;
+        np:hasPublicationInfo sub:Pubinfo ;
+        rdf:type np:Nanopublication .
+}
+
+sub:Assertion {
+    sub:ScientificName a openbiodiv:ScientificName;
+        dwciri:taxonomicStatus openbiodiv:TaxonomicDiscovery;
+		dwc:verbatimTaxonRank  "species";
+		dwc:genus	"Vansoniella";
+		dwc:specificEpithet	"chirindensis";
+		dwc:scientificNameAuthorship "Mey 2018".
+}
+
+sub:Provenance {
+    sub:Assertion prov:generatedAtTime "2018-03-16"^^xsd:dateTime .
+    sub:Assertion prov:hadPrimarySource <https://doi.org/10.3897/dez.65.23538> .
+}
+
+sub:Pubinfo {
+    this: prov:generatedAtTime "2021-01-28T10:50:00Z"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://orcid.org/0000-0002-8083-6048> .
+}

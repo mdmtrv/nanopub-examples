@@ -1,0 +1,61 @@
+@prefix this: <http://purl.org/np/RAwpR4yIFB2vjaf0Fs_IIYBxZp_5hKp8Rvy4iJvm1Xack> .
+@prefix sub: <http://purl.org/np/RAwyR4yIFA3fjaf0Fs_IIYBxZp_5hKp8Rvy4iJWm2Xask> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix dbpedia: <http://dbpedia.org/ontology/> .
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix nomen: <http://purl.obolibrary.org/obo/NOMEN/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openbiodiv: <http://www.openbiodiv.net/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix fabio: <http://purl.org/spar/fabio/> .
+@prefix doco: <http://purl.org/spar/doco/> .
+
+sub:Head {
+    this: np:hasAssertion sub:Assertion ;
+        np:hasProvenance sub:Provenance ;
+        np:hasPublicationInfo sub:Pubinfo ;
+        rdf:type np:Nanopublication .
+}
+
+sub:Assertion {
+#scientific name - figure - genomic
+	
+    sub:Figure a doco:Figure;
+		openbiodiv:mentionsIdentifier openbiodiv:80CDB649-9FDA-466F-B5A6-0090602137B7;
+		foaf:depicts sub:Organism;
+		openbiodiv:hasDownloadLink "https://binary.pensoft.net/fig/26871".
+	
+	sub:Organism dwc:identificationID sub:Identification;
+		a dwc:Organism.
+	
+	sub:Identification dwciri:toTaxon openbiodiv:9C56596B-DDE6-4272-A886-8CA9866D6BD2;
+		a dwc:Identification.
+		
+	openbiodiv:9C56596B-DDE6-4272-A886-8CA9866D6BD2 a openbiodiv:ScientificName;
+		dwc:genus	"Plutella";
+		dwc:specificEpithet "australiana"
+		dwc:verbatimTaxonRank  "species";
+		rdfs:label "Plutella australiana".
+		
+	openbiodiv:80CDB649-9FDA-466F-B5A6-0090602137B7 а datacite:ResourceIdentifier;
+		a openbiodiv:BOLDRecord;
+		fabio:hasURL "http://www.boldsystems.org/index.php/Public_SearchTerms?query=BIOUG00844-C06"^^xsd:anyURI;
+		rdfs:label "BIOUG00844-C06".
+		
+}
+
+sub:Provenance {
+    sub:Assertion prov:generatedAtTime "2019-12-04"^^xsd:dateTime .
+    sub:Assertion prov:hadPrimarySource <10.3897/BDJ.7.e35907> .
+}
+
+sub:Pubinfo {
+    this: prov:generatedAtTime "2021-01-28T11:40:00Z"^^xsd:dateTime ;
+        prov:wasAttributedTo <https://orcid.org/0000-0002-8083-6048> .
+}
