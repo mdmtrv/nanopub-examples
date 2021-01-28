@@ -24,8 +24,7 @@ sub:Assertion {
         dwciri:taxonomicStatus openbiodiv:TaxonomicDiscovery;
 		dwc:verbatimTaxonRank  "species";
 		dwc:genus	"Vansoniella";
-		dwc:specificEpithet	"chirindensis";
-		dwc:scientificNameAuthorship "Mey 2018".
+		dwc:specificEpithet	"chirindensis".
 }
 
 sub:Provenance {

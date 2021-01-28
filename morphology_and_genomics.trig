@@ -23,8 +23,9 @@ sub:Head {
         rdf:type np:Nanopublication .
 }
 
+#Link between specimen and genomic information
+
 sub:Assertion {
-#scientific name - figure - genomic
 	
     sub:Figure a doco:Figure;
 		openbiodiv:mentionsIdentifier openbiodiv:80CDB649-9FDA-466F-B5A6-0090602137B7;
