@@ -1,0 +1,59 @@
+@prefix this: <http://purl.org/np/RAfNg3GUnbn3oX009JbkCmAMR6TQzCIz1CJ2hWSQppQjo> .
+@prefix sub: <http://purl.org/np/RAfNg3GUnbn3oX009JbkCmAMR6TQzCIz1CJ2hWSQppQjo#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix openbiodiv: <http://www.openbiodiv.net/> .
+@prefix datacite: <http://purl.org/spar/datacite/> .
+@prefix po: <http://www.essepuntato.it/2008/12/pattern#> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:Assertion;
+    np:hasProvenance sub:Provenance;
+    np:hasPublicationInfo sub:Pubinfo;
+    a np:Nanopublication .
+}
+
+sub:Assertion {
+  sub:Identification dwciri:toTaxon openbiodiv:F0B3018D-E789-4D11-AF5C-FDDF7181E933;
+    dwc:typeStatus "holotype";
+    a dwc:Identification .
+  
+  sub:Organism dwc:associatedReferences openbiodiv:A3E55547-773E-403A-AC8B-0A4D19469822;
+    dwc:identificationID sub:Identification;
+    dwc:institutionID <http://grbio.org/cool/0tqf-efed>;
+    a dwc:Organism .
+  
+  openbiodiv:A3E55547-773E-403A-AC8B-0A4D19469822 po:contains sub:Identification;
+    openbiodiv:mentionsIdentifier openbiodiv:FD83A6AC-66CD-452D-9857-EE4746A449D1;
+    a openbiodiv:MaterialsExamined .
+  
+  openbiodiv:F0B3018D-E789-4D11-AF5C-FDDF7181E933 dwc:genus "Syrrhoe";
+    dwc:specificEpithet "anneheleneae";
+    dwc:verbatimTaxonRank "species";
+    a openbiodiv:ScientificName;
+    rdfs:label "Syrrhoe anneheleneae" .
+  
+  openbiodiv:FD83A6AC-66CD-452D-9857-EE4746A449D1 datacite:usesIdentifierScheme datacite:genbank;
+    a openbiodiv:GenBankAccession;
+    rdfs:label "MK972331" .
+}
+
+sub:Provenance {
+  sub:Assertion prov:generatedAtTime "2019-06-26"^^xsd:dateTime;
+    prov:hadPrimarySource <https://doi.org/10.3897/evolsyst.3.35737> .
+}
+
+sub:Pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "L9XhB1zWSTbkwCVYtIREqPob6/jIC2taihsO4LCB8sVwy3qXsZx0qr9LhOE3IQe3kDgTsijNq1zi2Dr/8M1hyLBOnD6qjsWk5YLMcOSRnlcv5pNl6Wutmk8QtHN1OnkaUb0d6yO9PqGRORI2AEuQtkF2qq0yWPdFMipS9Z9um4g=";
+    npx:hasSignatureTarget this: .
+  
+  this: prov:generatedAtTime "2021-03-10T10:40:00Z"^^xsd:dateTime;
+    prov:wasAttributedTo <https://orcid.org/0000-0002-8083-6048> .
+}
