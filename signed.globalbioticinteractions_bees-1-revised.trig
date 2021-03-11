@@ -1,5 +1,5 @@
-@prefix this: <http://purl.org/np/RAdkFSMllsQxGnmPnXD4r7wpIiw7xVbWVcTN-4PW8Ejp4> .
-@prefix sub: <http://purl.org/np/RAdkFSMllsQxGnmPnXD4r7wpIiw7xVbWVcTN-4PW8Ejp4#> .
+@prefix this: <http://purl.org/np/RALH9kv-pal7qlx1xiE0Bnr6jEHCnGgZsBKIc_wifbxQ4> .
+@prefix sub: <http://purl.org/np/RALH9kv-pal7qlx1xiE0Bnr6jEHCnGgZsBKIc_wifbxQ4#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -8,6 +8,7 @@
 @prefix obo: <http://purl.obolibrary.org/obo/> .
 @prefix dc: <http://purl.org/dc/elements/1.1/> .
 @prefix prism: <http://prismstandard.org/namespaces/basic/2.0/> .
+@prefix nomen: <http://purl.obolibrary.org/obo/NOMEN/> .
 @prefix openbiodiv: <http://openbiodiv.net/> .
 @prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
 @prefix dwciri: <http://rs.tdwg.org/dwc/iri/> .
@@ -25,10 +26,10 @@ sub:Head {
 sub:Assertion {
   sub:ScName_1 dwc:genus "Lasioglossum";
     dwc:specificEpithet "mosselinum";
-    a obo:NOMENNOMEN_0000036 .
+    a nomen:NOMEN_0000036 .
   
   sub:ScName_2 dwc:genus "Compositae";
-    a obo:NOMENNOMEN_0000036 .
+    a nomen:NOMEN_0000036 .
   
   sub:TaxonomicConcept_2 openbiodiv:scientificName sub:ScName_2;
     dwc:taxonID "6070956";
@@ -64,7 +65,7 @@ sub:Provenance {
 sub:Pubinfo {
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
-    npx:hasSignature "hDp8AwRkBUSXY7OGqwSB0rd5tnIcLSB3TyNhofY0MRbwzCFFxJNDDHi7wW0A8/Mpv0hSVLKTjsztYN1ikKc7hNj+wecGmUyNp4NkuKJZ4wxLaua5ybvbbWVLSnap/g3QYQ3SDdukZHYj5mQTzTi1QtgYVbJ3bGtDnY70b//DEOM=";
+    npx:hasSignature "DVT1rI+8Jlm1+pYQrOQ3OdttPKfmT1JCVkesmpfdpJB0EbBYoLnV/L1x6iXx7rv18i1kcy69dGTTxR2uQzK/3PoUDkKQuWp8Q9RYhfbwtOMDv+LpU9TCnEdSfRL76OYHH7cVG74gmrPoFsRgiazJ71WsHXVLSVvIT3F9srEKQmI=";
     npx:hasSignatureTarget this: .
   
   this: dcterms:license <https://creativecommons.org/licenses/by/4.0/>;
