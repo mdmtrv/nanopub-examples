@@ -1,5 +1,5 @@
-@prefix this: <http://purl.org/np/RALH9kv-pal7qlx1xiE0Bnr6jEHCnGgZsBKIc_wifbxQ4> .
-@prefix sub: <http://purl.org/np/RALH9kv-pal7qlx1xiE0Bnr6jEHCnGgZsBKIc_wifbxQ4#> .
+@prefix this: <http://purl.org/np/RAKFKzK4N5XBiDrnhZIkT6jnW71mBFFZwQhoHJwdznoFA> .
+@prefix sub: <http://purl.org/np/RAKFKzK4N5XBiDrnhZIkT6jnW71mBFFZwQhoHJwdznoFA#> .
 @prefix np: <http://www.nanopub.org/nschema#> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
 @prefix prov: <http://www.w3.org/ns/prov#> .
@@ -57,15 +57,15 @@ sub:Provenance {
   
   sub:JournalArticle prism:doi "https://doi.org/10.5852/ejt.2012.28";
     prism:publicationDate "2012"^^xsd:year;
-    dc:title "Capalictus, a new thisgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae).";
-    dcterms:bibliographicCitation "Pauly, A., J. Gibbs and M. Kuhlmann. 2012. Capalictus, a new thisgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae). European Journal of Taxonomy 28: 1-28";
+    dc:title "Capalictus, a new subgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae).";
+    dcterms:bibliographicCitation "Pauly, A., J. Gibbs and M. Kuhlmann. 2012. Capalictus, a new subgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae). European Journal of Taxonomy 28: 1-28";
     a fabio:JournalArticle .
 }
 
 sub:Pubinfo {
   sub:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
-    npx:hasSignature "DVT1rI+8Jlm1+pYQrOQ3OdttPKfmT1JCVkesmpfdpJB0EbBYoLnV/L1x6iXx7rv18i1kcy69dGTTxR2uQzK/3PoUDkKQuWp8Q9RYhfbwtOMDv+LpU9TCnEdSfRL76OYHH7cVG74gmrPoFsRgiazJ71WsHXVLSVvIT3F9srEKQmI=";
+    npx:hasSignature "K1GoEpvsNvjXXDDGIzzIvn53fT4QqAUhQh1SKNSL9m4uLJ5NuXqW8EwrHGZ/Gi4+WFRVkdnrVsbPQgc5ZWWPN2CnpdE5U4+nVaH4b0SGESI1YKAwhY67o05tMvvpn8hUapLshTjAj4HnXRjbKhDWHETr+YINDjMyR/mf3TMoJvM=";
     npx:hasSignatureTarget this: .
   
   this: dcterms:license <https://creativecommons.org/licenses/by/4.0/>;

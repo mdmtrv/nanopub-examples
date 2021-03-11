@@ -56,10 +56,10 @@ this:Provenance {
   this:Assertion prov:wasDerivedFrom this:JournalArticle.
  
   this:JournalArticle a fabio:JournalArticle;
-             dc:title "Capalictus, a new thisgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae).";
+             dc:title "Capalictus, a new subgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae).";
              prism:publicationDate "2012"^^xsd:year;
              prism:doi "https://doi.org/10.5852/ejt.2012.28";
-             dcterms:bibliographicCitation "Pauly, A., J. Gibbs and M. Kuhlmann. 2012. Capalictus, a new thisgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae). European Journal of Taxonomy 28: 1-28" .
+             dcterms:bibliographicCitation "Pauly, A., J. Gibbs and M. Kuhlmann. 2012. Capalictus, a new subgenus of Lasioglossum Curtis, 1833 from South Africa, with description of three new species (Hymenoptera, Apoidea, Halictidae). European Journal of Taxonomy 28: 1-28" .
    
 }
  
