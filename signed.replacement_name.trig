@@ -1,0 +1,45 @@
+@prefix this: <http://example.com/1.RAwJgezFf2tc9YFPDuLh6kn84JnkocDwUToy7C60zamu8> .
+@prefix sub: <http://example.com/1.RAwJgezFf2tc9YFPDuLh6kn84JnkocDwUToy7C60zamu8#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix openbiodiv: <http://openbiodiv.net/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:Assertion;
+    np:hasProvenance sub:Provenance;
+    np:hasPublicationInfo sub:Pubinfo;
+    a np:Nanopublication .
+}
+
+sub:Assertion {
+  openbiodiv:0A789A5E-530D-41A0-B2E7-83AD1AC30B1F openbiodiv:replacementName openbiodiv:5AF27D09-6D77-4D8C-958A-721BA9DD0B5E;
+    dwc:genus "Reduvius";
+    dwc:specificEpithet "iopterus";
+    dwc:verbatimTaxonRank "species";
+    a openbiodiv:ScientificName .
+  
+  openbiodiv:5AF27D09-6D77-4D8C-958A-721BA9DD0B5E openbiodiv:taxonomicStatus "new combination";
+    dwc:genus "Aristathlus";
+    dwc:scientificNameAuthorship "(Perty, 1834)";
+    dwc:specificEpithet "iopterus";
+    dwc:verbatimTaxonRank "species";
+    a openbiodiv:ScientificName .
+}
+
+sub:Provenance {
+  sub:Assertion prov:generatedAtTime "2015-06-16"^^xsd:dateTime;
+    prov:hadPrimarySource <https://doi.org/10.3897/BDJ.3.e5152> .
+}
+
+sub:Pubinfo {
+  sub:sig npx:hasAlgorithm "RSA";
+    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
+    npx:hasSignature "Q5lN1cMK8nntBsYr7ObP9t0UkI1H6P7ax3PywMlwzWtGzO6TLTvkWKiq4qNM91vACbIbYLgsNHRai+GT+11kGbwvER1Rn1F5XhZnIZ+5wJ6IG/j3pBt40fpAv4KuhVXTijWd8dIt9h+UMcK8uRRiU4gClO4H/8/JXWSA4tP3ZDU=";
+    npx:hasSignatureTarget this: .
+  
+  this: prov:generatedAtTime "2021-04-08T09:00:00Z"^^xsd:dateTime;
+    prov:wasAttributedTo <https://orcid.org/0000-0002-8083-6048> .
+}
