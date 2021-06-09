@@ -86,11 +86,6 @@ this:Provenance {
 }
 
 this:Pubinfo {
-  this:sig npx:hasAlgorithm "RSA";
-    npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
-    npx:hasSignature "S+uhOhieT9PAi3SEzhFP69dI8TY1Mt01kuKZX16jteBjfJLkqkI498qWuA1w4haJ9q93ZV/YojCq/LQHwAEfkjyfqQ/PYxKYXdzpGsJwPbcjqCi/2YKLHR2s4PytGJFFud2bvWvEfl2M5+FPXO5i9e4i6AHVSxcAhDTRIDUSFM8=";
-    npx:hasSignatureTarget this: .
-  
   this: prov:generatedAtTime "2016-10-10T12:30:00Z"^^xsd:dateTime;
     prov:wasAttributedTo this:eotuama .
 }
