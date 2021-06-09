@@ -1,5 +1,4 @@
-@prefix this: <http://purl.org/np/RAVo5Kmz-evZFEuM0PziuYZhdI8IUvqZg5JRhCD-_iacU> .
-@prefix sub: <http://purl.org/np/RAVo5Kmz-evZFEuM0PziuYZhdI8IUvqZg5JRhCD-_iacU#> .
+@prefix this: <http://purl.org/np/> .
 @prefix skos: <http://www.w3.org/2004/02/skos/core#> .
 @prefix dbpedia: <http://dbpedia.org/ontology/> .
 @prefix dcterms: <http://purl.org/dc/terms/> .
@@ -13,15 +12,15 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix npx: <http://purl.org/nanopub/x/> .
 
-sub:Head {
-  this: np:hasAssertion sub:Assertion;
-    np:hasProvenance sub:Provenance;
-    np:hasPublicationInfo sub:Pubinfo;
+this:Head {
+  this: np:hasAssertion this:Assertion;
+    np:hasProvenance this:Provenance;
+    np:hasPublicationInfo this:Pubinfo;
     a np:Nanopublication .
 }
 
-sub:Assertion {
-  sub:ScName_1 dwciri:nameAccordingTo <http://dx.doi.org/10.3897/BDJ.4.e10095>;
+this:Assertion {
+  this:ScName_1 dwciri:nameAccordingTo <http://dx.doi.org/10.3897/BDJ.4.e10095>;
     dwc:class "Arachnida";
     dwc:order "Araneae";
     dwc:family "Gnaphosidae";
@@ -31,14 +30,14 @@ sub:Assertion {
     dwc:scientificNameAuthorship "Deltshev, 2016";
     a nomen:NOMEN_0000036 .
   
-  sub:_1 dwc:eventDate "05/25/2015";
+  this:_1 dwc:eventDate "05/25/2015";
     dwc:habitat "under stones";
     dwc:samplingProtocol "hand collecting";
     a dwc:Event .
   
-  sub:_2 dcterms:description "Determination of Haser stoevi sec. Deltschev 2016"@en;
-    dwciri:identifiedBy sub:christo-deltschev;
-    dwciri:toTaxon sub:ScName_1;
+  this:_2 dcterms:description "Determination of Haser stoevi sec. Deltschev 2016"@en;
+    dwciri:identifiedBy this:christo-deltschev;
+    dwciri:toTaxon this:ScName_1;
     dwc:dateIdentified "2015"^^xsd:date;
     dwc:identifiedBy "Hristo Deltschev";
     dwc:institutionCode "NMNHS";
@@ -46,7 +45,7 @@ sub:Assertion {
     dwc:typeStatus "Holotype";
     a dwc:Identification .
   
-  sub:_3 dwc:continent "Asia", dbpedia:Asia;
+  this:_3 dwc:continent "Asia", dbpedia:Asia;
     dwc:country "Turkmenistan", dbpedia:Turkmenistan;
     dwc:county "Koytendag District";
     dwc:decimalLatitude "37 56.443";
@@ -56,42 +55,42 @@ sub:Assertion {
     dwc:verbatimElevation "1150";
     a dcterms:Location .
   
-  sub:_4 dwciri:recordedBy sub:p-stoev;
+  this:_4 dwciri:recordedBy this:p-stoev;
     dwc:recordedBy "Pavel Stoev";
     a dwc:Occurrence .
   
-  sub:_5 dwc:eventID sub:_1;
-    dwc:identificationID sub:_2;
-    dwc:locationID sub:_3;
-    dwc:occurrenceID sub:_4;
+  this:_5 dwc:eventID this:_1;
+    dwc:identificationID this:_2;
+    dwc:locationID this:_3;
+    dwc:occurrenceID this:_4;
     a dwc:Organism;
     rdfs:comment "A new spider species, Heser stoevi sp. nov. (male and female) found in Koytendag Mountains, southeastern Turkmenistan is described and illustrated."@en .
   
-  sub:christo-deltschev a "Christo Deltschev", foaf:Agent, foaf:Person;
+  this:christo-deltschev a "Christo Deltschev", foaf:Agent, foaf:Person;
     skos:prefLabel "Christo Deltschev";
     foaf:givenName "Christo";
     foaf:mbox "deltschev@gmail.com";
     foaf:surname "Deltschev" .
   
-  sub:eotuama a "Éamonn Ó Tuama", foaf:Agent;
+  this:eotuama a "Éamonn Ó Tuama", foaf:Agent;
     foaf:givenName "Éamonn Ó";
     foaf:surname "Ó Tuama" .
   
-  sub:p-stoev a foaf:Agent;
+  this:p-stoev a foaf:Agent;
     rdfs:label "P. Stoev" .
 }
 
-sub:Provenance {
-  sub:Assertion prov:generatedAtTime "2016-08-31"^^xsd:dateTime;
+this:Provenance {
+  this:Assertion prov:generatedAtTime "2016-08-31"^^xsd:dateTime;
     prov:hadPrimarySource <http://dx.doi.org/10.3897/BDJ.4.e10095> .
 }
 
-sub:Pubinfo {
-  sub:sig npx:hasAlgorithm "RSA";
+this:Pubinfo {
+  this:sig npx:hasAlgorithm "RSA";
     npx:hasPublicKey "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQCwi1YMnpV5z/0oMXyFYDKS5cirQQWTMZ/jbglmVY1gl3YAgrkqsQUmgaxA/ho+VV8jsfREIL8PT2czbmCjGjMJoNaKVqJq1GoIUV9+Kj9yXxNySyDAOTDsIM0zdj1BEu5uNbtfzwQPGuhVpgLR05Uk/meCyYLPs3BxC5zRbtulmwIDAQAB";
     npx:hasSignature "S+uhOhieT9PAi3SEzhFP69dI8TY1Mt01kuKZX16jteBjfJLkqkI498qWuA1w4haJ9q93ZV/YojCq/LQHwAEfkjyfqQ/PYxKYXdzpGsJwPbcjqCi/2YKLHR2s4PytGJFFud2bvWvEfl2M5+FPXO5i9e4i6AHVSxcAhDTRIDUSFM8=";
     npx:hasSignatureTarget this: .
   
   this: prov:generatedAtTime "2016-10-10T12:30:00Z"^^xsd:dateTime;
-    prov:wasAttributedTo sub:eotuama .
+    prov:wasAttributedTo this:eotuama .
 }
