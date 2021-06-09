@@ -22,13 +22,13 @@ sub:Head {
 
 sub:Assertion {
   sub:ScName_1 dwciri:nameAccordingTo <http://dx.doi.org/10.3897/BDJ.4.e10095>;
-    dwc:class "Insecta";
+    dwc:class "Arachnida";
+    dwc:order "Araneae";
     dwc:family "Gnaphosidae";
     dwc:genus "Haser";
-    dwc:order "Araneae";
+    dwc:specificEpithet "stoevi"
     dwc:rank "species";
     dwc:scientificNameAuthorship "Deltshev, 2016";
-    dwc:specificEpithet "stoevi";
     a nomen:NOMEN_0000036 .
   
   sub:_1 dwc:eventDate "05/25/2015";
