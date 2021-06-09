@@ -26,7 +26,7 @@ sub:Assertion {
     dwc:order "Araneae";
     dwc:family "Gnaphosidae";
     dwc:genus "Haser";
-    dwc:specificEpithet "stoevi"
+    dwc:specificEpithet "stoevi";
     dwc:rank "species";
     dwc:scientificNameAuthorship "Deltshev, 2016";
     a nomen:NOMEN_0000036 .
