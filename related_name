@@ -1,0 +1,40 @@
+@prefix this: <http://purl.org/np/RAQmeNQc2FFd2zvOrYMTyTcytx_NpQLnmwNaxxx_vjSRc> .
+@prefix sub: <http://purl.org/np/RAQmeNQc2FFd2zvOrYMTyTcytx_NpQLnmwNaxxx_vjSRc#> .
+@prefix dwc: <http://rs.tdwg.org/dwc/terms/> .
+@prefix np: <http://www.nanopub.org/nschema#> .
+@prefix prov: <http://www.w3.org/ns/prov#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix openbiodiv: <http://openbiodiv.net/> .
+@prefix npx: <http://purl.org/nanopub/x/> .
+
+sub:Head {
+  this: np:hasAssertion sub:Assertion;
+    np:hasProvenance sub:Provenance;
+    np:hasPublicationInfo sub:Pubinfo;
+    a np:Nanopublication .
+}
+
+sub:Assertion {
+  openbiodiv:7EE7B82D-7326-4559-AE77-A376378E6E3B a openbiodiv:ScientificName ;
+    openbiodiv:relatedName openbiodiv:9909B1FE-A898-41BA-9BCD-BC74FFDE07CF ;
+    openbiodiv:taxonomicStatus "nom. n.";
+    dwc:order "Panmegaloptera";
+    dwc:verbatimTaxonRank "order".
+
+
+  openbiodiv:9909B1FE-A898-41BA-9BCD-BC74FFDE07CF a openbiodiv:ScientificName ;
+    openbiodiv:relatedName openbiodiv:7EE7B82D-7326-4559-AE77-A376378E6E3B;
+    dwc:order "Megaloptera";
+    dwc:verbatimTaxonRank "order".
+
+}
+
+sub:Provenance {
+  sub:Assertion prov:generatedAtTime "2013-12-4"^^xsd:dateTime;
+    prov:hadPrimarySource <https://doi.org/10.3897/zookeys.358.6289> .
+}
+
+sub:Pubinfo {
+  this: prov:generatedAtTime "2021-04-08T09:00:00Z"^^xsd:dateTime;
+    prov:wasAttributedTo <https://orcid.org/0000-0002-8083-6048> .
+}
